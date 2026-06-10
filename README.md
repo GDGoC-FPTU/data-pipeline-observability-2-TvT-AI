@@ -1,14 +1,14 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24112993&assignment_repo_type=AssignmentRepo)
 # Day 10 Lab: Data Pipeline & Data Observability
 
-**Student Email:** email@example.com
-**Name:** (Dien ten cua ban)
+**Student ID:** 2A202600744
+**Name:** Trần Văn Thắng
 
 ---
 
 ## Mo ta
 
-(Mo ta ngan gon bai lab va nhung gi ban da lam)
+Bài lab này xây dựng một pipeline ETL đơn giản để đọc dữ liệu JSON, loại bỏ bản ghi không hợp lệ, tính giá giảm 10%, chuẩn hóa danh mục sản phẩm và lưu kết quả ra CSV. Kết quả gồm 3 bản ghi hợp lệ từ 5 bản ghi gốc, với 2 bản ghi bị loại do giá không đúng hoặc danh mục rỗng.
 
 ---
 
@@ -26,8 +26,18 @@ python solution.py
 
 ### Chay Agent Simulation (Stress Test)
 ```bash
-# Mo ta cach ban chay thi nghiem Clean vs Garbage data
+python agent_simulation.py
 ```
+
+---
+
+## Ket qua
+
+Sau khi chay pipeline, file `processed_data.csv` duoc tao ra voi 3 ban ghi hop le. 2 ban ghi bi loai do:
+- `price <= 0`
+- `category` rong
+
+File `processed_data.csv` bao gom cac cot: `id`, `product`, `price`, `category`, `discounted_price`, `processed_at`.
 
 ---
 
